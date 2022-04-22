@@ -1,0 +1,75 @@
+.circle-backdrop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+
+.circle-backdrop-focus {
+    position: relative;
+    z-index: 101;
+}
+
+.circle-button {
+    border: 0.2rem solid #000000;
+    background: #ffffff;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: unset;
+    padding: 0.5rem;
+    transition: all 0.5s;
+}
+
+.circle-button:hover, .circle-button:focus, .circle-button:active {
+    color: #ffffff;
+    background: #000000;
+}
+
+.circle-menu-data {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.circle-menu-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 102;
+}
+
+.circle-menu-burger-bar {
+    display: block;
+    width: 1.2em;
+    height: 0.2rem;
+    background: #000000;
+    margin-bottom: 0.3em;
+    border-radius: 1em;
+    transition: all 0.5s;
+}
+
+.circle-menu-burger-bar:last-child {
+    margin-bottom: 0;
+}
+
+.circle-tooltip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: #000000;
+    border-radius: 0.3rem;
+    color: #ffffff;
+    padding: 0.25rem 0.5rem 0.3rem 0.5rem;
+    z-index: 104;
+}

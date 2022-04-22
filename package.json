@@ -1,7 +1,7 @@
 {
-  "name": "react-circular-menu",
+  "name": "@markphilpot/react-circular-menu",
   "version": "2.3.3",
-  "description": "Circle menu component for React.",
+  "description": "Circle menu component for React (w/ vanilla css)",
   "main": "./dist/index",
   "types": "./dist/index",
   "author": "Fawad Ali <m.fawaadali98@gmail.com>",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/9inpachi/react-circular-menu#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/9inpachi/react-circular-menu.git"
+    "url": "git+https://github.com/markphilpot/react-circular-menu.git"
   },
   "keywords": [
     "react",
@@ -19,10 +19,11 @@
     "list"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src/style.css"
   ],
   "bugs": {
-    "url": "https://github.com/9inpachi/react-circular-menu/issues"
+    "url": "https://github.com/markphilpot/react-circular-menu/issues"
   },
   "scripts": {
     "clean": "rm -rf ./dist",
@@ -33,16 +34,13 @@
   },
   "peerDependencies": {
     "react": ">= 16",
-    "react-dom": ">= 16",
-    "styled-components": ">= 4"
+    "react-dom": ">= 16"
   },
   "devDependencies": {
     "@types/node": "^16.10.1",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.13",
-    "@types/styled-components": "^5.1.20",
     "prettier": "^2.5.1",
-    "styled-components": "^5.3.3",
     "typescript": "^4.5.4"
   },
   "eslintConfig": {
