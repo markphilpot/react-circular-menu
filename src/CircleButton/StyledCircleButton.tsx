@@ -6,9 +6,13 @@ interface Props {
 }
 
 export const StyledButton: React.FC<Props & ButtonProps> = (props) => {
-    const { $size, children, ...rest } = props;
+    const { $size, className, children, ...rest } = props;
+    let cn = 'circle-button';
+    if(className) {
+        cn += ` ${className}`
+    }
   return (
-      <button className={'circle-button'} style={{
+      <button className={cn} style={{
         width: `${props.$size}rem`,
         height: `${props.$size}rem`
       }} {...rest}>
@@ -18,9 +22,13 @@ export const StyledButton: React.FC<Props & ButtonProps> = (props) => {
 }
 
 export const StyledLink: React.FC<Props & LinkProps & { href: string, target?: string }> = (props) => {
-    const { $size, children, ...rest } = props;
+    const { $size, className, children, ...rest } = props;
+    let cn = 'circle-button';
+    if(className) {
+        cn += ` ${className}`
+    }
   return (
-      <a className={'circle-button'} style={{
+      <a className={cn} style={{
         width: `${props.$size}rem`,
         height: `${props.$size}rem`
       }} {...rest}>

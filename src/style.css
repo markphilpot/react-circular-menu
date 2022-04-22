@@ -73,3 +73,13 @@
     padding: 0.25rem 0.5rem 0.3rem 0.5rem;
     z-index: 104;
 }
+
+.circle-menu-toggle {
+    position: relative;
+    flex-direction: column;
+    z-index: 103;
+}
+
+.circle-menu-toggle:hover > .circle-menu-burger-bar, .circle-menu-toggle:focus > .circle-menu-burger-bar, .circle-menu-toggle:active > .circle-menu-burger-bar {
+    background: #ffffff;
+}

@@ -31,7 +31,7 @@
     "prepublishOnly": "yarn build",
     "dev": "yarn clean && tsc --watch",
     "build": "yarn clean && yarn tsc",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "BROWSER=\"google chrome\" start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {

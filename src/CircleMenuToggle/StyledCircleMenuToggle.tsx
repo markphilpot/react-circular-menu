@@ -1,6 +1,5 @@
-import React, {MouseEventHandler} from 'react';
+import React from 'react';
 import { CircleButton } from "../CircleButton/CircleButton";
-import {ButtonProps, DivProps} from "../types";
 
 export const StyledCircleMenuBurgerBar: React.FC = (props) => {
     return (
@@ -17,35 +16,13 @@ interface Props {
     onClick: any; // TODO
 }
 
-// export const StyledCircleMenuToggle = styled(CircleButton)<Props>`
-//   position: relative;
-//   flex-direction: column;
-//   z-index: 103;
-//
-//   &:is(:hover, :focus, :active) > ${StyledCircleMenuBurgerBar} {
-//     background: #ffffff;
-//   }
-//
-//   ${({ menuActive }) =>
-//     menuActive &&
-//     css`
-//       ${StyledCircleMenuBurgerBar}:nth-child(1) {
-//         transform: translate(-0.1em, 0.17em) rotateZ(-40deg);
-//         width: 1.2em;
-//       }
-//       ${StyledCircleMenuBurgerBar}:nth-child(2) {
-//         opacity: 0;
-//       }
-//       ${StyledCircleMenuBurgerBar}:nth-child(3) {
-//         transform: translate(-0.1em, -0.17em) rotateZ(40deg);
-//         width: 1.2em;
-//       }
-//     `}
-// `;
-
 export const StyledCircleMenuToggle: React.FC<Props> = (props) => {
-    const { menuActive, ...rest } = props;
+    const { menuActive, className, ...rest } = props;
+    let cn = 'circle-menu-toggle';
+    if(className) {
+        cn += ` ${className}`
+    }
     return (
-        <CircleButton {...rest}/>
+        <CircleButton className={cn} {...rest}/>
     )
 }
