@@ -7,10 +7,10 @@ interface Props {
 }
 
 export const StyledCircleMenuItem: React.FC<Props> = (props) => {
-  const { menuActive, rotationAngle, $radius } = props;
+  const { menuActive, rotationAngle, $radius, ...rest } = props;
 
   const style = menuActive ? {
-    transform: `translateY(-50%) rotate(${rotationAngle}deg) translate(${$radius}rem) rotate(-${rotationAngle}deg)`,
+    transform: `translateY(-50%) rotate(${rotationAngle}deg) translate(${$radius}rem) rotate(${-rotationAngle}deg)`,
     visibility: 'visible',
     opacity: 1,
   } : {}
@@ -20,6 +20,7 @@ export const StyledCircleMenuItem: React.FC<Props> = (props) => {
           className={'circle-menu-item'}
           // @ts-ignore ¯\_(ツ)_/¯
           style={style}
+          {...rest}
       >
         {props.children}
       </li>

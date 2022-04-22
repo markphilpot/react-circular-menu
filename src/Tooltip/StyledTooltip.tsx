@@ -1,11 +1,11 @@
 import React from 'react';
 import {DivProps} from "../types";
 
-export const StyledTooltip: React.FC<DivProps> = (props) => {
+export const StyledTooltip = React.forwardRef<HTMLDivElement, DivProps>((props, ref) => {
     const { children, ...rest } = props;
     return (
-        <div className={'circle-tooltip'} {...rest}>
+        <div ref={ref} className={'circle-tooltip'} {...rest}>
             {children}
         </div>
     )
-}
+});

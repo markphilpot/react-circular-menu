@@ -44,7 +44,8 @@ interface Props {
 // `;
 
 export const StyledCircleMenuToggle: React.FC<Props> = (props) => {
+    const { menuActive, ...rest } = props;
     return (
-        <CircleButton {...props}/>
+        <CircleButton {...rest}/>
     )
 }

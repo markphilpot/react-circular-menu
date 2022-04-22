@@ -13,7 +13,7 @@ import {
 import { CircleMenuToggle } from "../CircleMenuToggle/CircleMenuToggle";
 import { StyledCircleMenuData } from "./StyledCircleMenu";
 
-interface Props {
+export interface Props {
   startAngle: number;
   rotationAngle: number;
   rotationAngleInclusive?: boolean;

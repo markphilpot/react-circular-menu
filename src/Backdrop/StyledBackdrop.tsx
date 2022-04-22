@@ -5,25 +5,27 @@ interface Props {
 }
 
 export const StyledBackdrop: React.FC<Props & { onClick: () => void }> = (props) => {
-    let className = 'circle-backdrop';
-    if(props.className) {
-        className += ` ${props.className}`
+    const { className, children, ...rest } = props;
+    let cn = 'circle-backdrop';
+    if(className) {
+        cn += ` ${className}`
     }
     return (
-        <div className={className}>
-            {props.children}
+        <div className={cn} {...rest}>
+            {children}
         </div>
     )
 }
 
 export const StyledBackdropFocus: React.FC<Props> = (props) => {
-    let className = 'circle-backdrop-focus';
-    if(props.className) {
-        className += ` ${props.className}`
+    const { className, children, ...rest } = props;
+    let cn = 'circle-backdrop-focus';
+    if(className) {
+        cn += ` ${className}`
     }
     return (
-        <div className={className}>
-            {props.children}
+        <div className={cn} {...rest}>
+            {children}
         </div>
     )
 }
