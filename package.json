@@ -32,7 +32,8 @@
     "dev": "yarn clean && tsc --watch",
     "build": "yarn clean && yarn tsc",
     "storybook": "BROWSER=\"google chrome\" start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test": "echo \"No test specified\""
   },
   "peerDependencies": {
     "react": ">= 16",
