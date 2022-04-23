@@ -13,10 +13,9 @@
 }
 
 .circle-button {
-    border: 0.2rem solid #000000;
-    background: #ffffff;
+    border: 0;
+    background: transparent;
     text-decoration: none;
-    color: #000000;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
@@ -25,11 +24,6 @@
     box-sizing: unset;
     padding: 0.5rem;
     transition: all 0.5s;
-}
-
-.circle-button:hover, .circle-button:focus, .circle-button:active {
-    color: #ffffff;
-    background: #000000;
 }
 
 .circle-menu-data {

@@ -6,7 +6,10 @@ import { CircleMenu } from './CircleMenu';
 import {CircleMenuItem} from "../CircleMenuItem/CircleMenuItem";
 import {TooltipPlacement} from "../Tooltip/library/types";
 
+import { IoSunnyOutline, IoMoonOutline, IoSettingsOutline, IoReloadOutline, IoLogoGithub } from 'react-icons/io5';
+
 import '../style.css';
+import {CircleButton} from "../CircleButton/CircleButton";
 
 export default {
     /* 👇 The title prop is optional.
@@ -99,6 +102,44 @@ export const UpperQuarter: ComponentStory<typeof CircleMenu> = () => {
                 </CircleMenuItem>
                 <CircleMenuItem tooltip="Info">
                     Info
+                </CircleMenuItem>
+            </CircleMenu>
+        </div>
+    );
+};
+
+export const UpperQuarterIcons: ComponentStory<typeof CircleMenu> = () => {
+    return (
+        <div style={{
+            width: '100%',
+            height: '500px',
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+        }}>
+            <CircleMenu
+                startAngle={-135}
+                rotationAngle={90}
+                itemSize={0.8}
+                radius={3}
+                /**
+                 * rotationAngleInclusive (default true)
+                 * Whether to include the ending angle in rotation because an
+                 * item at 360deg is the same as an item at 0deg if inclusive.
+                 * Leave this prop for angles other than 360deg unless otherwise desired.
+                 */
+                rotationAngleInclusive={true}
+                menuToggleElement={<CircleButton size={1}><IoSunnyOutline/></CircleButton>}
+            >
+                <CircleMenuItem tooltip="Light">
+                    <IoSunnyOutline/>
+                </CircleMenuItem>
+                <CircleMenuItem tooltip="Dark">
+                    <IoMoonOutline/>
+                </CircleMenuItem>
+                <CircleMenuItem tooltip="System">
+                    <IoSettingsOutline/>
                 </CircleMenuItem>
             </CircleMenu>
         </div>
