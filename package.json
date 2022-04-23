@@ -19,8 +19,7 @@
     "list"
   ],
   "files": [
-    "dist",
-    "src/style.css"
+    "dist"
   ],
   "bugs": {
     "url": "https://github.com/markphilpot/react-circular-menu/issues"
