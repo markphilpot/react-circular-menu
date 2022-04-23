@@ -63,5 +63,8 @@
   "dependencies": {},
   "np": {
     "contents": "dist"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
