@@ -1,7 +1,7 @@
 import React, {
   Children,
   cloneElement,
-  FC,
+  FC, PropsWithChildren,
   ReactElement,
   useState,
 } from "react";
@@ -25,7 +25,7 @@ export interface Props {
   onMenuToggle?: (toggleState: boolean) => void;
 }
 
-export const CircleMenu: FC<Props> = ({
+export const CircleMenu: FC<PropsWithChildren<Props>> = ({
   rotationAngleInclusive = true,
   radius = 2,
   itemSize = 2,

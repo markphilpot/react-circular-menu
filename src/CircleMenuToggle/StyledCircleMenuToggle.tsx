@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import { CircleButton } from "../CircleButton/CircleButton";
 
 export const StyledCircleMenuBurgerBar: React.FC = (props) => {
@@ -16,7 +16,7 @@ interface Props {
     onClick: any; // TODO
 }
 
-export const StyledCircleMenuToggle: React.FC<Props> = (props) => {
+export const StyledCircleMenuToggle: React.FC<PropsWithChildren<Props>> = (props) => {
     const { menuActive, className, ...rest } = props;
     let cn = 'circle-menu-toggle';
     if(className) {

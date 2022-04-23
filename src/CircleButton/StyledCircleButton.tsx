@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 import {LinkProps, ButtonProps} from "../types";
 
 interface Props {
   $size: number;
 }
 
-export const StyledButton: React.FC<Props & ButtonProps> = (props) => {
+export const StyledButton: React.FC<PropsWithChildren<Props & ButtonProps>> = (props) => {
     const { $size, className, children, ...rest } = props;
     let cn = 'circle-button';
     if(className) {
@@ -21,7 +21,7 @@ export const StyledButton: React.FC<Props & ButtonProps> = (props) => {
   )
 }
 
-export const StyledLink: React.FC<Props & LinkProps & { href: string, target?: string }> = (props) => {
+export const StyledLink: React.FC<PropsWithChildren<Props & LinkProps & { href: string, target?: string }>> = (props) => {
     const { $size, className, children, ...rest } = props;
     let cn = 'circle-button';
     if(className) {

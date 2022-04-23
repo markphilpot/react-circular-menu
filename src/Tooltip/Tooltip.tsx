@@ -2,7 +2,7 @@ import React, {
   Children,
   cloneElement,
   FC,
-  isValidElement,
+  isValidElement, PropsWithChildren,
   useRef,
   useState,
 } from "react";
@@ -17,7 +17,7 @@ export interface TooltipProps {
   placement?: TooltipPlacement;
 }
 
-export const Tooltip: FC<TooltipProps> = ({
+export const Tooltip: FC<PropsWithChildren<TooltipProps>> = ({
   title,
   placement = TooltipPlacement.Top,
   children,

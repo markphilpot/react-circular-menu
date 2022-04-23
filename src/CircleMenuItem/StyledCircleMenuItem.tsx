@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropsWithChildren} from 'react';
 
 interface Props {
   menuActive: boolean;
@@ -6,7 +6,7 @@ interface Props {
   $radius: number;
 }
 
-export const StyledCircleMenuItem: React.FC<Props> = (props) => {
+export const StyledCircleMenuItem: React.FC<PropsWithChildren<Props>> = (props) => {
   const { menuActive, rotationAngle, $radius, ...rest } = props;
 
   const style = menuActive ? {

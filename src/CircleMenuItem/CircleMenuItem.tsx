@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, {FC, PropsWithChildren} from "react";
 import { CircleButton, CircleButtonProps } from "../CircleButton/CircleButton";
 import { Tooltip } from "../Tooltip/Tooltip";
 import { StyledCircleMenuItem } from "./StyledCircleMenuItem";
@@ -10,7 +10,7 @@ export interface CircleMenuItemProps extends Omit<CircleButtonProps, "size"> {
   rotationAngle?: number;
 }
 
-export const CircleMenuItem: FC<CircleMenuItemProps> = ({
+export const CircleMenuItem: FC<PropsWithChildren<CircleMenuItemProps>> = ({
   size = 2,
   radius = 1,
   menuActive = false,
