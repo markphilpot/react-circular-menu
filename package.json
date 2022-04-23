@@ -1,6 +1,6 @@
 {
   "name": "@mphilpot/react-circular-menu",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Circle menu component for React (w/ vanilla css)",
   "main": "./dist/index",
   "types": "./dist/index",
