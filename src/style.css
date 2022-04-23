@@ -15,6 +15,7 @@
 .circle-button {
     border: 0;
     background: transparent;
+    color: unset;
     text-decoration: none;
     border-radius: 50%;
     cursor: pointer;
