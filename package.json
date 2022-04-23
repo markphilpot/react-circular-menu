@@ -1,5 +1,5 @@
 {
-  "name": "@markphilpot/react-circular-menu",
+  "name": "@mphilpot/react-circular-menu",
   "version": "2.3.3",
   "description": "Circle menu component for React (w/ vanilla css)",
   "main": "./dist/index",
@@ -30,10 +30,11 @@
     "tsc": "tsc",
     "prepublishOnly": "yarn build",
     "dev": "yarn clean && tsc --watch",
-    "build": "yarn clean && yarn tsc",
+    "build": "yarn clean && yarn tsc && yarn copy",
     "storybook": "BROWSER=\"google chrome\" start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "echo \"No test specified\""
+    "test": "echo \"No test specified\"",
+    "copy": "cp ./src/style.css ./dist/"
   },
   "peerDependencies": {
     "react": ">= 16",
@@ -60,5 +61,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "np": {
+    "contents": "dist"
+  }
 }
