@@ -27,8 +27,10 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "tsc": "tsc",
+    "lint": "tsc --noemit",
+    "format": "prettier --write .",
     "prepublishOnly": "yarn build",
-    "dev": "yarn clean && tsc --watch",
+    "dev": "yarn clean && mkdir dist && yarn copy && tsc --watch & watch -p src/style.css -c 'yarn copy'",
     "build": "yarn clean && yarn tsc && yarn copy",
     "storybook": "BROWSER=\"google chrome\" start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -52,10 +54,11 @@
     "@types/react-dom": "^17.0.13",
     "babel-loader": "^8.2.5",
     "prettier": "^2.5.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "watch-cli": "^0.2.3"
   },
   "eslintConfig": {
     "extends": "react-app"

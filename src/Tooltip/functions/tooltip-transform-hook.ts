@@ -1,5 +1,5 @@
-import { CSSProperties, useMemo } from "react";
-import { TooltipPlacement } from "../library/types";
+import { CSSProperties, useMemo } from 'react';
+import { TooltipPlacement } from '../library/types';
 
 const tooltipPadding = 5;
 

@@ -1,7 +1,7 @@
-import { DOMAttributes, ReactElement } from "react";
+import { DOMAttributes, ReactElement } from 'react';
 
 export const getTooltipElementProps = <T>(
-  elementProps: ReactElement["props"],
+  elementProps: ReactElement['props'],
   openTooltip: () => void,
   closeTooltip: () => void
 ): DOMAttributes<T> => ({

@@ -1,17 +1,8 @@
-import React, {
-  Children,
-  cloneElement,
-  FC, PropsWithChildren,
-  ReactElement,
-  useState,
-} from "react";
-import { Backdrop } from "../Backdrop/Backdrop";
-import {
-  CircleMenuItem,
-  CircleMenuItemProps,
-} from "../CircleMenuItem/CircleMenuItem";
-import { CircleMenuToggle } from "../CircleMenuToggle/CircleMenuToggle";
-import { StyledCircleMenuData } from "./StyledCircleMenu";
+import React, { Children, cloneElement, FC, PropsWithChildren, ReactElement, useState } from 'react';
+import { Backdrop } from '../Backdrop/Backdrop';
+import { CircleMenuItem, CircleMenuItemProps } from '../CircleMenuItem/CircleMenuItem';
+import { CircleMenuToggle } from '../CircleMenuToggle/CircleMenuToggle';
+import { StyledCircleMenuData } from './StyledCircleMenu';
 
 export interface Props {
   startAngle: number;
@@ -23,6 +14,7 @@ export interface Props {
   menuToggleElement?: ReactElement;
   menuToggleClassName?: string;
   onMenuToggle?: (toggleState: boolean) => void;
+  closeOnItemClick?: boolean;
 }
 
 export const CircleMenu: FC<PropsWithChildren<Props>> = ({
@@ -33,6 +25,7 @@ export const CircleMenu: FC<PropsWithChildren<Props>> = ({
   menuToggleElement,
   menuToggleClassName,
   onMenuToggle,
+  closeOnItemClick = false,
   ...props
 }) => {
   const [menuActive, setMenuActive] = useState<boolean>(false);
@@ -49,15 +42,10 @@ export const CircleMenu: FC<PropsWithChildren<Props>> = ({
       onClick: () => {
         menuToggleElement.props.onClick?.();
         toggleMenu();
-      }
+      },
     })
   ) : (
-    <CircleMenuToggle
-      className={menuToggleClassName}
-      menuActive={menuActive}
-      size={itemSize}
-      toggleMenu={toggleMenu}
-    />
+    <CircleMenuToggle className={menuToggleClassName} menuActive={menuActive} size={itemSize} toggleMenu={toggleMenu} />
   );
 
   return (
@@ -75,12 +63,14 @@ export const CircleMenu: FC<PropsWithChildren<Props>> = ({
 
           return (
             <CircleMenuItem
-              key={"cm-item-" + index}
+              key={'cm-item-' + index}
               {...(child as ReactElement<CircleMenuItemProps>).props}
               size={itemSize}
               menuActive={menuActive}
               radius={radius}
               rotationAngle={angle}
+              closeOnClick={closeOnItemClick}
+              toggleMenu={toggleMenu}
             />
           );
         })}

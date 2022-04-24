@@ -40,12 +40,12 @@ yarn add styled-components
 ## Example
 
 ```jsx
-import MailIcon from "@material-ui/icons/Mail";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import MapIcon from "@material-ui/icons/Map";
+import MailIcon from '@material-ui/icons/Mail';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import MapIcon from '@material-ui/icons/Map';
 
 // Import the circular menu
-import { CircleMenu, CircleMenuItem, TooltipPlacement } from "react-circular-menu";
+import { CircleMenu, CircleMenuItem, TooltipPlacement } from 'react-circular-menu';
 
 export const TestMenuComponent = (props) => {
   return (
@@ -63,7 +63,7 @@ export const TestMenuComponent = (props) => {
       rotationAngleInclusive={false}
     >
       <CircleMenuItem
-        onClick={() => alert("Clicked the item")}
+        onClick={() => alert('Clicked the item')}
         tooltip="Email"
         tooltipPlacement={TooltipPlacement.Right}
       >
@@ -217,7 +217,7 @@ Callback when the component is clicked.
 Example:
 
 ```js
-(event) => console.log("Clicked");
+(event) => console.log('Clicked');
 ```
 
 #### `radius?: number`
